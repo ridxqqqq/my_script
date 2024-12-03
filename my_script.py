@@ -1,5 +1,6 @@
 # my_script.py
 import requests
+from datetime import datetime
 
 myKey = '&key=d69dcdd27f13496dbf2d13036b2d838b'  # 和风天气Key
 City = 'location=101050806'  # 伊春南岔代码
@@ -33,7 +34,8 @@ if __name__ == '__main__':
     mBody = {
         "msgtype": "text",
         "text": {
-            "content": '南岔县天气预报:' + '\n' + '\n' + '当前温度:' + CurrentWeather['now'][
+            "content": '当前时间:' + datetime.now().strftime(
+                '%Y-%m-%d %H:%M:%S') + '\n' + '南岔县天气预报:' + '\n' + '\n' + '当前温度:' + CurrentWeather['now'][
                 'temp'] + '\n' + '当前体感温度:' +
                        CurrentWeather['now']['feelsLike'] + '\n' + '天气状况:' +
                        CurrentWeather['now']['text'] + '\n' + '相对湿度:' + CurrentWeather['now'][
