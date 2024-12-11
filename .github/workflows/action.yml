@@ -2,7 +2,7 @@ name: Python CI_test
 on:
   schedule:
     # 每天凌晨7点执行
-    - cron: '0 1 * * *'
+    - cron: '0 0 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
