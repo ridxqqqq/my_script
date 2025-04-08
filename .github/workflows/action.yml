@@ -1,8 +1,8 @@
 name: Python CI_test
 on:
   schedule:
-    # 每天凌晨0点执行
-    - cron: '0 0 * * *'
+    # 每天早晨7点执行
+    - cron: '00 23 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
