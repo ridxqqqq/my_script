@@ -19,3 +19,4 @@ jobs:
         python -m pip install datetime
     - name: Run Python script
       run: python my_script.py
+           date
